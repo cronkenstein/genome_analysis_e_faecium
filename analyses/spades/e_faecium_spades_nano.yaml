@@ -1,0 +1,18 @@
+[
+  {
+    orientation: "fr",
+    type: "paired-end",
+    right reads: [
+      "./ill_reads/E745-1.L500_SZAXPI015146-56_1_clean.fq.gz"
+    ],
+    left reads: [
+      "./ill_reads/E745-1.L500_SZAXPI015146-56_2_clean.fq.gz"
+    ]
+  },
+  {
+    type: "nanopore",
+    single reads: [
+      "./nano_reads/E745_all.fasta.gz",
+    ]
+  }
+]
