@@ -1,0 +1,55 @@
+Assembly	pac_e_faecium.contigs
+# contigs (>= 0 bp)	10
+# contigs (>= 1000 bp)	10
+# contigs (>= 5000 bp)	10
+# contigs (>= 10000 bp)	9
+# contigs (>= 25000 bp)	4
+# contigs (>= 50000 bp)	2
+Total length (>= 0 bp)	3155800
+Total length (>= 1000 bp)	3155800
+Total length (>= 5000 bp)	3155800
+Total length (>= 10000 bp)	3148758
+Total length (>= 25000 bp)	3062597
+Total length (>= 50000 bp)	2993705
+# contigs	10
+Largest contig	2775136
+Total length	3155800
+Reference length	3149315
+GC (%)	37.79
+Reference GC (%)	37.78
+N50	2775136
+NG50	2775136
+N90	218569
+NG90	218569
+auN	2456808.1
+auNG	2461867.1
+L50	1
+LG50	1
+L90	2
+LG90	2
+# misassemblies	229
+# misassembled contigs	6
+Misassembled contigs length	3092347
+# local misassemblies	18
+# scaffold gap ext. mis.	0
+# scaffold gap loc. mis.	0
+# unaligned mis. contigs	1
+# unaligned contigs	3 + 7 part
+Unaligned length	429106
+Genome fraction (%)	82.657
+Duplication ratio	1.047
+# N's per 100 kbp	0.00
+# mismatches per 100 kbp	321.92
+# indels per 100 kbp	20.69
+Largest alignment	156913
+Total aligned length	2726429
+NA50	28535
+NGA50	28535
+NA90	-
+NGA90	-
+auNA	45405.2
+auNGA	45498.7
+LA50	26
+LGA50	26
+LA90	-
+LGA90	-

@@ -1,0 +1,55 @@
+Assembly	nano_e_faecium.contigs
+# contigs (>= 0 bp)	44
+# contigs (>= 1000 bp)	44
+# contigs (>= 5000 bp)	32
+# contigs (>= 10000 bp)	14
+# contigs (>= 25000 bp)	0
+# contigs (>= 50000 bp)	0
+Total length (>= 0 bp)	367099
+Total length (>= 1000 bp)	367099
+Total length (>= 5000 bp)	323235
+Total length (>= 10000 bp)	187820
+Total length (>= 25000 bp)	0
+Total length (>= 50000 bp)	0
+# contigs	44
+Largest contig	23096
+Total length	367099
+Reference length	3149315
+GC (%)	38.86
+Reference GC (%)	37.78
+N50	10074
+NG50	-
+N90	4658
+NG90	-
+auN	10591.0
+auNG	1234.5
+L50	14
+LG50	-
+L90	34
+LG90	-
+# misassemblies	5
+# misassembled contigs	4
+Misassembled contigs length	50183
+# local misassemblies	0
+# scaffold gap ext. mis.	0
+# scaffold gap loc. mis.	0
+# unaligned mis. contigs	2
+# unaligned contigs	17 + 10 part
+Unaligned length	145722
+Genome fraction (%)	7.301
+Duplication ratio	0.962
+# N's per 100 kbp	0.00
+# mismatches per 100 kbp	408.75
+# indels per 100 kbp	2967.04
+Largest alignment	23093
+Total aligned length	221163
+NA50	5643
+NGA50	-
+NA90	-
+NGA90	-
+auNA	6412.9
+auNGA	747.5
+LA50	18
+LGA50	-
+LA90	-
+LGA90	-
