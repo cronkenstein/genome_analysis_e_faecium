@@ -13,10 +13,9 @@ if(!require("gplots")){
 library("gplots")
 library(pheatmap)
 
-### Hard coded path values below, do not commit this file until these are removed
-directory <- "./genome_analysis_e_faecium/counts/bh/paired"
-all_dir <- "./genome_analysis_e_faecium/counts/both/paired"
-serumSampleFileDir <- "./genome_analysis_e_faecium/counts/serum/paired"
+directory <- "./genome_analysis_e_faecium/results/counts/bh/paired"
+all_dir <- "./genome_analysis_e_faecium/results/counts/both/paired"
+serumSampleFileDir <- "./genome_analysis_e_faecium/results/counts/serum/paired"
 sampleNames <- grep("trim",list.files(directory),value=TRUE)
 serumSampleFiles <- grep("trim",list.files(serumSampleFileDir),value=TRUE)
 bhSampleTable <- data.frame(sampleName = sampleNames,
@@ -105,42 +104,10 @@ pheatmap(mat_scaled,
          color = colorRampPalette(c("blue", "white", "red"))(1000))
 
 
+# 1. Normalize and extract counts
+norm_counts <- counts(dds, normalized=TRUE)
 
-
-### Most differentially expressed genes
-
-### This portion seems to be not all that valuable. There are tons of differentially expressed genes with high significance
-
-result <- subset(x = na.omit(result[order(-result$sig, -result$log2FoldChange),]), padj <= alpha)
-
-selectedGenes <- c(
-  "Most significant" =  rownames(result)[which.max(result$sig)])
-
-top.logFC = rownames(result)[which.max(result$log2FoldChange)]
-gn.most.sign <- rownames(result)[1]
-gn.most.diff.val <- counts(dds.norm, normalized=T)[gn.most.sign,]
-
-## Select a gene with small fold change but high significance
-sel1 <- subset(
-  na.omit(result), 
-  sig >= 50 & log2FoldChange > 0 & log2FoldChange < 1.0)
-# dim(sel1)
-selectedGenes <- append(selectedGenes, 
-                        c("Small FC yet significant"=rownames(sel1)[1]))
-
-## Select the non-significant gene with the highest fold change
-sel2 <- subset(x = na.omit(result), padj > alpha & log2FoldChange > 0 & baseMean > 1000 & baseMean < 10000)
-# dim(sel2)
-sel2 <- sel2[order(sel2$log2FoldChange, decreasing = TRUE),][1,]
-selectedGenes <- append(
-  selectedGenes, 
-  c("Non-significant"=rownames(sel2)[1]))
-
-par(mfrow=c(length(selectedGenes),1))
-
-for (g in selectedGenes) {
-  barplot(counts(dds.norm, normalized=TRUE)[g,], 
-          col=c("blue", "blue", "blue", "red", "red", "red"), 
-          main=g, las=2, cex.names=0.5)
-}
-
+# 2. Plot histogram of log2 transformed counts to make it readable
+hist(log2(norm_counts + 1), breaks=100, 
+     col="grey", main="Distribution of Normalized Counts", 
+     xlab="Log2(Normalized Counts + 1)")
